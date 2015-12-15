@@ -1,0 +1,32 @@
+body {
+	font-family: 'Lora', serif;
+	background-color: white;
+	margin: 0px;
+}
+
+.floating-div {
+	position: relative;
+	float: left;
+}
+.floating-right-div {
+	position: relative;
+	float: right;
+}
+.inline-el {
+	display: inline-block;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+.header {
+	height: 50px;
+	background-color: black;
+}
+.search-container {
+	background-image: url('../assets/search_container.png');
+	height: 105px;
+	background-size: cover;
+}
+
+
+

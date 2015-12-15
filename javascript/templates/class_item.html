@@ -1,0 +1,41 @@
+<div class="left-container inline-el">
+	<div class="class-pic inline-el" style="background-image:url(<%- pic_url %>)"></div>
+</div>
+<div class="right-container inline-el">
+	<div class="title-container">
+		<div class="class-name inline-el"><%= name %></div>
+		<div class="likes-container inline-el">
+			<span class="likes-icon"></span>
+			<span class="likes-text">Likes: </span>
+			<span class="likes-value"><%= likes %></span>
+		</div>
+	</div>
+	<div class="class-middle-section">
+		<div class="subjects-container inline-el">
+			<div class="subject-heading">Subjects Offered</div>
+			<ul class = "subject-list">
+				<% for (var index=0; index<subjects.length; index++) { %>
+					<li class="subject-name"><%= subjects[index] %></li>
+				<% }%>
+			</ul>
+		</div>
+		<div class="middle-right-container inline-el">
+			<div class="fees-container">
+				<span class="fees-label">Fees: </span>
+				<span class="fees-amount"><%= fees %></span>
+			</div>
+			<% if(disc_text) {%>
+				<div class="special-offer"><%= disc_text %></div>
+			<% }%>
+			<div class="book-button"> Book </div>
+		</div>
+	</div>
+	<div class="address-container inline-el">
+		<span class = "location-marker contact-icon"></span>
+		<span class = "address-value"><%= address %></span>
+	</div>
+	<div class="call-container inline-el">
+		<span class = "call-marker contact-icon"></span>
+		<span class = "phone-number"><%= phone_number %></span>
+	</div>
+</div>
