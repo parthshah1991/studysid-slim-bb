@@ -2,22 +2,21 @@ define (['backbone'], function (Backbone) {
 	var AppRouter =  Backbone.Router.extend({
 		
 		routes: {
-			''					: 'indexView',
-			':site/jigar'		: 'jigarLanding'
+			':site/'				: 'listView',
+			':site/jigar'			: 'classDedicated'
 		},
 			
 		initialize : function () {
 			this.handleHREF();
-			this.startIndexView('views/landing_page');
 		},
 
-		indexView : function () {
-			indexViewPath = 'views/home/homePage';
+		listView : function () {
+			indexViewPath = 'views/landing_page';
 			this.startIndexView(indexViewPath);
 		},
 
-		jigarLanding: function () {
-			this.startIndexView('views/jigar_landing_page');
+		classDedicated: function () {
+			this.startIndexView('views/class_dedicated_page');
 		},
 
 		handleHREF: function () {
