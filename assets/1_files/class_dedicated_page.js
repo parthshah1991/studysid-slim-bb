@@ -15,7 +15,6 @@ define(['backbone',
 			this.headerView = new HeaderView()
 			$('.body').append(_.template(this.template)(this.model.toJSON()));
 			this.setElement('#main-container');
-			this.$el.addClass('class-dedicated')
 		}
 	});
 	return ClassDedicated;

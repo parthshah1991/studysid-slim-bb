@@ -1,19 +1,18 @@
 define([
 	'backbone',
-	'models/class_model',
 	'views/class_list_item',
 	'text!templates/main_content.html'
-	], function(Backbone, ClassCollection, ClassListItem, tpl) {
+	], function(Backbone, ClassListItem, tpl) {
 	var MainView = Backbone.View.extend({
 	
 		template : tpl,
 
 		childViews: null,
 
-		initialize: function() {
+		initialize: function(options) {
 			window.q = this;
+			this.classes = options.classes;
 			this.childViews = [];
-			this.classes = new ClassCollection([{featured: true}, {featured: false}])
 			this.render();
 		},
 
@@ -30,6 +29,13 @@ define([
 				listContainer.append(view.render());
 				this.childViews.push(view);
 			}
+		},
+		
+		destroy: function () {
+			for(var i=0; i<this.childViews.length; i++) {
+				this.childViews[i].destroy();
+			}
+			this.remove();
 		}
 	});
 	return MainView;

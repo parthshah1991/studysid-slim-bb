@@ -1,0 +1,97 @@
+<div id = "main-container" class="main-container">
+	<div class="heading-container">
+		<div class="class-name"><%= name %></div>
+		<div class="class-address sub-content"><%= address%></div>
+		<div class="class-phone sub-content"><%= phone_number %></div>
+		<div class="fees-container sub-content">
+			<span>Established in: </span>	
+			<span> <%= established_in %></span>
+		</div>
+		<div class="ratings-container">
+			<span class = "my-rating"><%= ratings %></span>
+			<span class = "my-rating">/ 5</span>
+		</div>
+	</div>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<% for(var index=0; index<carousel_images.length; index++) {%>
+				<% var className = index === 0 ? 'active' : ''%>
+				<li data-target="#myCarousel" data-slide-to="<%= index%>" class="<%= className %>"></li>
+			<% } %>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<% for(var index=0; index<carousel_images.length; index++) {%>
+				<% var className = index === 0 ? 'active' : ''%>
+				<div class="item <%= className %>">
+					<img src = <%= carousel_images[index] %>>
+				</div>
+			<% } %>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+	<div class="additional-details-container">
+		<h2 class="title-section">Additional Details</h2>
+		<ul class="details-list">
+			<%for(var index=0; index<additional_details.length; index++) {%>
+				<li class="list-item">
+					<span class="detail-label"><%= additional_details[index].label %> : </span>
+					<span class="detail-text"><%= additional_details[index].text %></span>
+				</li>
+			<%}%>
+		</ul>
+	</div>
+	
+	<div class="middle-section-container">
+		<h2 class="title-section"> Time Table </h2>
+		<div class = "table-container">
+			<div class="table-title-row">
+				<div class = "subject-title inline-el col-1">Subject</div>
+				<div class = "subject-fees inline-el col-2">Fees</div>
+			</div>
+			<div class = "tbody">
+				<% for (var index=0; index<Object.keys(subjectDetails).length; index++) { %>
+					<div class="row-container">
+						<div class="label1 inline-el col-1"><%= Object.keys(subjectDetails)[index] %></div>
+						<div class="text inline-el col-2"><%= subjectDetails[Object.keys(subjectDetails)[index]].fees %></div>
+					</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+	<div class=last-section>
+		<div class = "reviews-container"> 
+			<h2 class = "reviews-title title-section">Reviews</h2>
+			<div class="reviews-list-container">
+				<% for (var index=0; index<reviews.length; index++) { %>
+					<div class = "single-review">
+						<span class="author-name"><%= reviews[index].author%> : </span>
+						<span class="review"><%= reviews[index].text%></span>
+					</div>
+				<% } %>
+			</div>
+		</div>
+		<div class = "update-container"> 
+			<h2 class = "update-title title-section">Updates</h2>
+			<div class="update-list-container">
+				<% for (var index=0; index<updates.length; index++) { %>
+				<div class = "single-update">
+					<div class="review"><%= updates[index].text%></div>
+				</div>
+			<% } %>
+			</div>
+		</div>
+	</div>
+</div>

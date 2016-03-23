@@ -24,7 +24,7 @@ define(['backbone'], function(Backbone) {
 					latitude: 73,
 					longitude: 18
 				},
-				carousel_images: [url, url, url],
+				images: [url, url, url],
 				subjectDetails: {
 					'Science' 	: {
 						'timings' 	: ['1pm - 3pm', '8pm - 10pm'],
@@ -43,56 +43,20 @@ define(['backbone'], function(Backbone) {
 						'fees'		: 3000	
 					}
 				},
-				additional_details: [
-					{
-						label : 'Personal tuitions',
-						text: 'Yes'
-					},
-					{
-						label: 'Home Tuitions',
-						text: 'No'
-					},
-					{
-						label: 'Batch Strength',
-						text: 30
-					},
-					{
-						label: 'Group Discounts',
-						text: 'negotiate'
-					},
-					{
-						label: 'Days',
-						text: 'Weekends and Weekdays'
-					},
-					{
-						label: 'Total Students',
-						text: 350
-					},
-					{
-						label: 'Demo Lectures',
-						text: 'Yes'
-					},
-					{
-						label: 'Cover Up Lecture',
-						text: 'Yes'
-					},
-					{
-						label: 'Test Series',
-						text: 'Yes'
-					},
-					{
-						label: 'Payment Mechanism',
-						text: 'Cheque and Cash'
-					},
-					{
-						label: 'Video Lectures',
-						text: 'No'
-					},
-					{
-						label: 'Test Series',
-						text: 'No'
-					}
-				],
+				additional_details: {
+					personal_tuts: 'Yes',
+					home_tuts: 'No',
+					batch_strenght: 30,
+					group_disc: 'negotiate',
+					days: 'Weekends and Weekdays',
+					total_students: 350,
+					demo_lecs: 'Yes',
+					cover_up: 'Yes',
+					test_series: 'Yes',
+					payment: 'Cheque and Cash',
+					video_lecs: 'No',
+					carsh_course: 'No'
+				},
 				established_in: '1987',
 				ratings: 3.5,
 				phone_number: '9920065087',

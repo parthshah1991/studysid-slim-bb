@@ -1,8 +1,7 @@
 .main-container {
 	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 40px;
-	box-sizing: border-box;
+	margin-top: 40px;
+	box-sizong: border-box;
 }
 .main-container .left-content {
 	width: 300px;
@@ -87,7 +86,7 @@
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
 	-ms-user-select: none;      /* IE 10+ */
-	user-select: none;   
+user-select: none;   
 }
 .right-content .likes-container {
 	position: absolute;
@@ -139,7 +138,7 @@
 	background-position: center;
 }
 .right-content .fees-container {
-	height: 40px;
+	height: 20px;
 	line-height: 20px;
 	background-color: #7323dc;
 	padding: 10px;
@@ -167,130 +166,19 @@
 }
 /************************ Right Classes related Css Ends *************************/
 
-.class-dedicated {
-	background-color: beige;
-}
-
 .heading-container {
 	text-align: center;
-	position: relative;
 }
-.ratings-container {
-	position: absolute;
-	right: 40px;
-	top: 40px;
-	font-weight: bold;
-	font-size: 24px;
-	color: #7323dc;
-}
+
 .class-name {
 	font-size: 40px;
     line-height: 54px;
-    font-weight: 500;
 }
+
 .sub-content {
 	margin-top: 10px;
 }
+
 .carousel-container {
 	height: 300px;
-}
-.middle-section-container {
-	margin-top: 100px;
-}
-.title-section {
-	text-align: center;
-	color: gray;
-}
-.table-container {
-	width: 50%;
-	margin: auto;
-	margin-top: 30px;
-}
-.col-1, .col-2 {
-	width: 49%;
-	text-align: center;
-}
-.col-1{
-	border-right: 1px solid black;
-}
-.tbody .col-1 {
-	font-weight: bold;
-	color: #e02727;
-}
-.tbody .col-2 {
-	font-weight: bold;
-	color: #7323dc;
-}
-.table-title-row {
-	font-weight: bold;
-	font-size: 24px;
-	padding: 15px 0px;
-	border: 1px solid black;
-}
-.row-container {
-	padding: 10px 0px;
-	border: 1px solid black;
-}
-.additional-details {
-	width: 45%;
-	text-align: center;
-}
-
-.last-section {
-	white-space: nowrap;
-	margin-top: 35px;
-}
-
-.update-container,
-.reviews-container {
-	width: 50%;
-	margin: 0 auto;
-}
-.reviews-title,
-.update-title {
-	text-align: center;
-	margin-top: 100px;
-}
-.reviews-list-container,
-.update-list-container {
-	margin-top: 25px;
-}
-.author-name {
-	font-weight: bold;
-}
-
-.single-review,
-.single-update {
-	padding-top: 10px;
-}
-
-.carousel {
-	margin: 50px auto;
-}
-
-.carousel .item>img {
-	margin: auto;
-}
-
-.additional-details-container {
-	margin-top: 100px;
-}
-.details-list {
-	-webkit-column-count: 2;
-	-webkit-column-gap: 20px;
-	list-style: none;
-	position: relative;
-	width: 70%;
-	margin: 0 auto;
-	margin-top: 30px;
-	padding-left: 180px;
-}
-.detail-label {
-	font-weight: bold;
-}
-.detail-text {
-	color: #7323dc;
-}
-.list-item {
-	margin-top: 15px;
 }

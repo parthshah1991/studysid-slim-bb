@@ -8,7 +8,8 @@ define([
 		template : tpl,
 
 		events: {
-			'click .likes-icon'		:   'incrementLike'
+			'click .likes-icon'		:   'incrementLike',
+			'click'					: 	'gotoDedicatedPage'
 		},
 
 		className: 'class-container',
@@ -22,11 +23,21 @@ define([
 			return this.$el;
 		},
 
-		incrementLike: function () {
+		incrementLike: function (e) {
 			var currentLikes = this.model.get('likes') + 1;
 			this.model.set('likes', currentLikes);
 			this.$('.likes-value').text(currentLikes);
-			Index.getRouter().navigate('studysid/jigar',{trigger:true, replace:false});
+			e.preventDefault();
+			e.stopPropogation();
+		},
+
+		gotoDedicatedPage: function () {
+			id = this.model.get("id")
+			Index.getRouter().navigate('studysid/1' ,{trigger:true, replace:false});
+		},
+
+		destroy: function () {
+			this.remove();
 		}
 	});
 	return ClassItem;
