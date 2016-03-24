@@ -5,7 +5,8 @@ define (['backbone',
 		
 		routes: {
 			':site/'							: 'listView',
-			':site/:id'							: 'classDedicated'
+			':site/:id'							: 'classDedicated',
+			':site/getScore/:id'				: 'listView'
 		},
 			
 		initialize : function () {
